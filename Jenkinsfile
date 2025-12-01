@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/vathcodes/food-ggcloud.git'
+                git branch: 'main', url: 'https://github.com/vathcodes/aeco22food.git'
             }
         }
 
