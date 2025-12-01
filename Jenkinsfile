@@ -12,7 +12,14 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/vathcodes/aeco22food.git'
+                checkout([
+                    $class: 'GitSCM',
+                    branches: [[name: 'main']],
+                    userRemoteConfigs: [[
+                        url: 'https://github.com/vathcodes/aeco22food.git',
+                        credentialsId: 'github-user'
+                    ]]
+                ])
             }
         }
 
@@ -34,7 +41,6 @@ pipeline {
                     JWT_SECRET=$JWT_SECRET
                     VNPAY_TMN_CODE=$VNPAY_TMN_CODE
                     VNPAY_HASH_SECRET=$VNPAY_HASH_SECRET
-                    GITHUB_USER=$GITHUB_USER
                     BACKEND_URL=http://34.9.54.54:4000
                     FRONTEND_URL=http://34.9.54.54:3000
                     EOF
