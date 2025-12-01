@@ -28,7 +28,7 @@ app.use("/api/order", orderRouter)
 app.get("/", (req, res) => {
     res.send(`
         <h1 style="text-align:center; color: #ff6600;">
-            🍔 Welcome to AECO22A Food API! 🍕
+            🍔 Welcome to AECO22 Food API! 🍕
         </h1>
         <p style="text-align:center; font-size: 18px;">
             Available endpoints:
