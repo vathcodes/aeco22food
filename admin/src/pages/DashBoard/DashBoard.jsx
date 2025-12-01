@@ -7,7 +7,7 @@ import {
   PieChart, Pie, Cell, Legend, BarChart, Bar
 } from "recharts";
 import { FaUsers, FaHamburger, FaShoppingCart } from "react-icons/fa";
-import "./Dashboard.css";
+import "./DashBoard.css";
 
 const Dashboard = ({ url }) => {
   const [stats, setStats] = useState({ users: 0, foods: 0, orders: 0 });
